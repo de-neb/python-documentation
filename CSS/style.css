@@ -36,6 +36,30 @@ h1 {
   z-index: -1;
 }
 
+<<<<<<< HEAD
+@media (max-width: 980px) {
+  h1 {
+    text-align: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .item1 {
+    position: static;
+    border: none;
+    height: 250px;
+    overflow: auto;
+    border-bottom: 4px double #000;
+  }
+
+  .item2 {
+    position: static;
+  }
+}
+=======
 
 @media (max-width: 980px) {
     h1 {
@@ -60,6 +84,7 @@ h1 {
     }
   }
   
+>>>>>>> 753fe5a929c17179736025c419d55dc64fc352e6
 
 /* Navigation */
 
@@ -81,6 +106,13 @@ h1 {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+.nav-link:hover {
+  color:#4280b1;
+}
+
+=======
+>>>>>>> 753fe5a929c17179736025c419d55dc64fc352e6
 .no-style-list {
   list-style: none;
   padding: 0;
@@ -94,6 +126,15 @@ h1 {
   transform: translate(0, -10px);
 }
 
+<<<<<<< HEAD
+@media (max-width: 980px) {
+  .nav-link {
+    height: 40px;
+    padding: 5px;
+  }
+}
+
+=======
 @media (max-width: 980px){
     .nav-link{
         height: 40px;
@@ -102,15 +143,23 @@ h1 {
 }
 
 
+>>>>>>> 753fe5a929c17179736025c419d55dc64fc352e6
 /* Main Section */
 .main-section {
   margin-bottom: 50px;
 }
 
+<<<<<<< HEAD
+header {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+=======
 header{
     font-family: "Barlow", sans-serif;
     font-size: 1.6rem;
     font-weight: bold;
+>>>>>>> 753fe5a929c17179736025c419d55dc64fc352e6
 }
 
 p {
@@ -143,6 +192,16 @@ li {
   z-index: -1;
   color: #767676;
   display: block;
+<<<<<<< HEAD
+}
+
+@media (max-width: 980px) {
+  header,
+  h3 {
+    padding: 10px;
+  }
+}
+=======
   
 }
 
@@ -151,3 +210,4 @@ li {
         padding: 10px;
     }
 }
+>>>>>>> 753fe5a929c17179736025c419d55dc64fc352e6
