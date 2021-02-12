@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;1,600&family=Quicksand:wght@300;700&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/971ca775ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1><i class="fab fa-python"></i> Python Documentation</h1>
+
+    <div class="container">
+      <nav id="navbar" class="item1">
+        <header>Table of Contents</header>
+        <ul class="no-style-list">
+          <li class="nav-bullet">
+            <a class="nav-link" href="#About_Python">About Python</a>
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Using_the_Python_Interpreter"
+              >Using the Python Interpreter</a
+            >
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#An_Informal_Introduction_to_Python"
+              >An Informal Introduction to Python</a
+            >
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#More_Control_Flow_Tools"
+              >More Control Flow Tools</a
+            >
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Data_Structures">Data Structures</a>
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Modules">Modules</a>
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Input_and_Output">Input and Output</a>
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Errors_and_Exceptions"
+              >Errors and Exceptions</a
+            >
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Classes">Classes</a>
+          </li>
+          <li class="nav-bullet">
+            <a class="nav-link" href="#Reference">Reference</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="main-doc" class="item2">
+        <section class="main-section" id="About_Python">
+          <header>About Python</header>
+          <p>
+            Python is simple to use, but it is a real programming language,
+            offering much more structure and support for large programs than
+            shell scripts or batch files can offer. On the other hand, Python
+            also offers much more error checking than C, and, being a
+            very-high-level language, it has high-level data types built in,
+            such as flexible arrays and dictionaries. Because of its more
+            general data types Python is applicable to a much larger problem
+            domain than Awk or even Perl, yet many things are at least as easy
+            in Python as in those languages. Python allows you to split your
+            program into modules that can be reused in other Python programs. It
+            comes with a large collection of standard modules that you can use
+            as the basis of your programs — or as examples to start learning to
+            program in Python. Some of these modules provide things like file
+            I/O, system calls, sockets, and even interfaces to graphical user
+            interface toolkits like Tk. Python is an interpreted language, which
+            can save you considerable time during program development because no
+            compilation and linking is necessary. The interpreter can be used
+            interactively, which makes it easy to experiment with features of
+            the language, to write throw-away programs, or to test functions
+            during bottom-up program development. It is also a handy desk
+            calculator. Python enables programs to be written compactly and
+            readably. Programs written in Python are typically much shorter than
+            equivalent C, C++, or Java programs, for several reasons:
+          </p>
+
+          <ul>
+            <li>
+              the high-level data types allow you to express complex operations
+              in a single statement;
+            </li>
+            <li>
+              statement grouping is done by indentation instead of beginning and
+              ending brackets;
+            </li>
+            <li>no variable or argument declarations are necessary.</li>
+          </ul>
+        </section>
+        <section class="main-section" id="Using_the_Python_Interpreter">
+          <header>Using the Python Interpreter</header>
+          <p>
+            The Python interpreter is usually installed as
+            /usr/local/bin/python3.9 on those machines where it is available;
+            putting /usr/local/bin in your Unix shell’s search path makes it
+            possible to start it by typing the command:
+          </p>
+          <code class="example">python3.9</code>
+          <p>
+            to the shell. 1 Since the choice of the directory where the
+            interpreter lives is an installation option, other places are
+            possible; check with your local Python guru or system administrator.
+            (E.g., /usr/local/python is a popular alternative location.)
+          </p>
+          <p>
+            On Windows machines where you have installed Python from the
+            Microsoft Store, the python3.9 command will be available. If you
+            have the py.exe launcher installed, you can use the py command. See
+            Excursus: Setting environment variables for other ways to launch
+            Python.
+          </p>
+          <p>
+            Typing an end-of-file character (Control-D on Unix, Control-Z on
+            Windows) at the primary prompt causes the interpreter to exit with a
+            zero exit status. If that doesn’t work, you can exit the interpreter
+            by typing the following command: quit().
+          </p>
+          <p>
+            The interpreter’s line-editing features include interactive editing,
+            history substitution and code completion on systems that support the
+            GNU Readline library. Perhaps the quickest check to see whether
+            command line editing is supported is typing Control-P to the first
+            Python prompt you get. If it beeps, you have command line editing;
+            see Appendix Interactive Input Editing and History Substitution for
+            an introduction to the keys. If nothing appears to happen, or if ^P
+            is echoed, command line editing isn’t available; you’ll only be able
+            to use backspace to remove characters from the current line.
+          </p>
+        </section>
+        <section class="main-section" id="An_Informal_Introduction_to_Python">
+          <header>An Informal Introduction to Python</header>
+          <p>
+            In the following examples, input and output are distinguished by the
+            presence or absence of prompts (>>> and …): to repeat the example,
+            you must type everything after the prompt, when the prompt appears;
+            lines that do not begin with a prompt are output from the
+            interpreter. Note that a secondary prompt on a line by itself in an
+            example means you must type a blank line; this is used to end a
+            multi-line command. Many of the examples in this manual, even those
+            entered at the interactive prompt, include comments. Comments in
+            Python start with the hash character, #, and extend to the end of
+            the physical line. A comment may appear at the start of a line or
+            following whitespace or code, but not within a string literal. A
+            hash character within a string literal is just a hash character.
+            Since comments are to clarify code and are not interpreted by
+            Python, they may be omitted when typing in examples.
+          </p>
+          <code class="example">
+            <em># this is the first comment</em> <br />
+            spam = 1 <em># and this is the second comment</em> <br />
+            <em># ... and now a third!</em> <br />
+            text = "# This is not a comment because it's inside quotes."
+          </code>
+        </section>
+        <section class="main-section" id="More_Control_Flow_Tools">
+          <header>More Control Flow Tools</header>
+          <p>
+            Besides the while statement just introduced, Python uses the usual
+            flow control statements known from other languages, with some
+            twists.
+          </p>
+          <h3>If Statements</h3>
+          <p>
+            Perhaps the most well-known statement type is the if statement. For
+            example:
+          </p>
+          <code class="example">
+            <span>x = int(input("Please enter an integer: "))</span> <br />
+            <span>if x < 0:</span> <br />
+            <span>&emsp;x = 0</span> <br />
+            <span>&emsp;print('Negative changed to zero')</span> <br />
+            <span>elif x == 0:</span> <br />
+            <span>&emsp;print('Zero')</span> <br />
+            <span>elif x == 1:</span> <br />
+            <span>&emsp;print('Single')</span> <br />
+            <span>else:</span> <br />
+            <span>&emsp;print('More')</span> <br />
+          </code>
+        </section>
+        <section class="main-section" id="Data_Structures">
+          <header>Data Structures</header>
+          <p>
+            This chapter describes some things you’ve learned about already in
+            more detail, and adds some new things as well.
+          </p>
+          <h3>More on Lists</h3>
+          <ul>
+            <li>list.append(x)</li>
+            <li>list.extend(iterable)</li>
+            <li>list.insert(i, x)</li>
+            <li>list.remove(x)</li>
+            <li>list.pop([i])</li>
+            <li>list.clear()</li>
+            <li>list.index(x[, start[, end]])</li>
+            <li>list.count(x)</li>
+            <li>
+              list.sort(*, key=A module is a file containing Python definitions
+              and statements. The file name is the module name with the suffix
+              .py appended. Within a module, the module’s name (as a string) is
+              available as the value of the global variable __name__.None,
+              reverse=False)
+            </li>
+            <li>list.reverse()</li>
+            <li>list.copy()</li>
+          </ul>
+          <h3>Dictionaries</h3>
+          <p>
+            Another useful data type built into Python is the dictionary (see
+            Mapping Types — dict). Dictionaries are sometimes found in other
+            languages as “associative memories” or “associative arrays”. Unlike
+            sequences, which are indexed by a range of numbers, dictionaries are
+            indexed by keys, which can be any immutable type; strings and
+            numbers can always be keys. Tuples can be used as keys if they
+            contain only strings, numbers, or tuples; if a tuple contains any
+            mutable object either directly or indirectly, it cannot be used as a
+            key. You can’t use lists as keys, since lists can be modified in
+            place using index assignments, slice assignments, or methods like
+            append() and extend().
+          </p>
+          <p>
+            It is best to think of a dictionary as a set of key: value pairs,
+            with the requirement that the keys are unique (within one
+            dictionary). A pair of braces creates an empty dictionary: {}.
+            Placing a comma-separated list of key:value pairs within the braces
+            adds initial key:value pairs to the dictionary; this is also the way
+            dictionaries are written on outputA module is a file containing
+            Python definitions and statements. The file name is the module name
+            with the suffix .py appended. Within a module, the module’s name (as
+            a string) is available as the value of the global variable __name__.
+            del. If you store using a key that is already in use, the old value
+            associated with that key is forgotten. It is an error to extract a
+            value using a non-existent key.
+          </p>
+        </section>
+        <section class="main-section" id="Modules">
+          <header>Modules</header>
+          <p>
+            If you quit from the Python interpreter and enter it again, the
+            definitions you have made (functions and variables) are lost.
+            Therefore, if you want to write a somewhat longer program, you are
+            better off using a text editor to prepare the input for the
+            interpreter and running it with that file as input instead. This is
+            known as creating a script. As your program gets longer, you may
+            want to split it into several files for easier maintenance. You may
+            also want to use a handy function that you’ve written in several
+            programs without copying its definition into each program.
+          </p>
+          <p>
+            To support this, Python has a way to put definitions in a file and
+            use them in a script or in an interactive instance of the
+            interpreter. Such a file is called a module; definitions from a
+            module can be imported into other modules or into the main module
+            (the collection of variables that you have access to in a script
+            executed at the top level and in calculator mode).
+          </p>
+          <p>
+            A module is a file containing Python definitions and statements. The
+            file name is the module name with the suffix .py appended. Within a
+            module, the module’s name (as a string) is available as the value of
+            the global variable __name__.
+          </p>
+        </section>
+        <section class="main-section" id="Input_and_Output">
+          <header>Input and Output</header>
+          <p>
+            There are several ways to present the output of a program; data can
+            be printed in a human-readable form, or written to a file for future
+            use. This chapter will discuss some of the possibilities.
+          </p>
+          <h3>Fancier Output Formatting</h3>
+          <p>
+            So far we’ve encountered two ways of writing values: expression
+            statements and the print() function. (A third way is using the
+            write() method of file objects; the standard output file can be
+            referenced as sys.stdout. See the Library Reference for more
+            information on this.)
+          </p>
+          <p>
+            Often you’ll want more control over the formatting of your output
+            than simply printing space-separated values. There are several ways
+            to format output.
+          </p>
+          <ul>
+            <li>
+              To use formatted string literals, begin a string with f or F
+              before the opening quotation mark or triple quotation mark. Inside
+              this string, you can write a Python expression between { and }
+              characters that can refer to variables or literal values.
+            </li>
+            <code class="example">
+              >>> year = 2016 <br />
+              >>> event = 'Referendum' <br />
+              >>> f'Results of the {year} {event}' <br />
+              'Results of the 2016 Referendum'
+            </code>
+            <li>
+              The str.format() method of strings requires more manual effort.
+              You’ll still use { and } to mark where a variable will be
+              substituted and can provide detailed formatting directives, but
+              you’ll also need to provide the information to be formatted.
+            </li>
+            <code class="example">
+              >>> yes_votes = 42_572_654 <br />
+              >>> no_votes = 43_132_495 <br />
+              >>> percentage = yes_votes / (yes_votes + no_votes) <br />
+              >>> '{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)
+              <br />
+              ' 42572654 YES votes 49.67%' <br />
+            </code>
+            <li>
+              Finally, you can do all the string handling yourself by using
+              string slicing and concatenation operations to create any layout
+              you can imagine. The string type has some methods that perform
+              useful operations for padding strings to a given column width.
+            </li>
+            <p>
+              When you don’t need fancy output but just want a quick display of
+              some variables for debugging purposes, you can convert any value
+              to a string with the repr() or str() functions.
+            </p>
+          </ul>
+        </section>
+        <section class="main-section" id="Errors_and_Exceptions">
+          <header>Errors and Exceptions</header>
+          <p>
+            Until now error messages haven’t been more than mentioned, but if
+            you have tried out the examples you have probably seen some. There
+            are (at least) two distinguishable kinds of errors: syntax errors
+            and exceptions.
+          </p>
+          <h3>Syntax Errors</h3>
+          <p>
+            Syntax errors, also known as parsing errors, are perhaps the most
+            common kind of complaint you get while you are still learning
+            Python:
+          </p>
+          <code class="example">
+            >>> while True print('Hello world') <br />
+            &emsp;File, line 1 <br />
+            &emsp;&emsp;while True print('Hello world') <br />
+            SyntaxError: invalid syntax
+          </code>
+          <p>
+            The parser repeats the offending line and displays a little ‘arrow’
+            pointing at the earliest point in the line where the error was
+            detected. The error is caused by (or at least detected at) the token
+            preceding the arrow: in the example, the error is detected at the
+            function print(), since a colon (':') is missing before it. File
+            name and line number are printed so you know where to look in case
+            the input came from a script.
+          </p>
+        </section>
+        <section class="main-section" id="Classes">
+          <header>Classes</header>
+          <p>
+            Classes provide a means of bundling data and functionality together.
+            Creating a new class creates a new type of object, allowing new
+            instances of that type to be made. Each class instance can have
+            attributes attached to it for maintaining its state. Class instances
+            can also have methods (defined by its class) for modifying its
+            state.
+          </p>
+          <p>
+            Compared with other programming languages, Python’s class mechanism
+            adds classes with a minimum of new syntax and semantics. It is a
+            mixture of the class mechanisms found in C++ and Modula-3. Python
+            classes provide all the standard features of Object Oriented
+            Programming: the class inheritance mechanism allows multiple base
+            classes, a derived class can override any methods of its base class
+            or classes, and a method can call the method of a base class with
+            the same name. Objects can contain arbitrary amounts and kinds of
+            data. As is true for modules, classes partake of the dynamic nature
+            of Python: they are created at runtime, and can be modified further
+            after creation.
+          </p>
+          <p>
+            In C++ terminology, normally class members (including the data
+            members) are public (except see below Private Variables), and all
+            member functions are virtual. As in Modula-3, there are no
+            shorthands for referencing the object’s members from its methods:
+            the method function is declared with an explicit first argument
+            representing the object, which is provided implicitly by the call.
+            As in Smalltalk, classes themselves are objects. This provides
+            semantics for importing and renaming. Unlike C++ and Modula-3,
+            built-in types can be used as base classes for extension by the
+            user. Also, like in C++, most built-in operators with special syntax
+            (arithmetic operators, subscripting etc.) can be redefined for class
+            instances.
+          </p>
+        </section>
+        <section class="main-section" id="Reference">
+          <header>Reference</header>
+          <p>
+            Visit the
+            <a href="https://docs.python.org/3/tutorial/classes.html"
+              >official Python Documentation</a
+            >
+            to get the full information about Python.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
